@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Board</title>
+    <link rel="stylesheet" href="assets/scoreboard.css" />
+  </head>
+  <body>
+    <h1>
+      <div id="winpoint">Win Point :</div>
+
+      <span id="playerone"> 0 </span>
+
+      VS
+
+      <span id="playertwo"> 0 </span>
+    </h1>
+
+    <button id="p1buttonadd">+1</button>
+    <button id="p1buttonmin">-1</button>
+
+    <button id="p2buttonadd">+1</button>
+    <button id="p2buttonmin">-1</button>
+    <button id="reset">Reset</button>
+    <br />
+    <br />
+    <form id="form" action="/start">
+      <label for="winpointinput">Win Point:</label>
+      <input type="number" id="winpointinput" placeholder="Masukkan Win Point" />
+      <button>Submit</button>
+    </form>
+
+    <script src="assets/scoreboard.js"></script>
+  </body>
+</html>

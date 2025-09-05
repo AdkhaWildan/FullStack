@@ -1,0 +1,46 @@
+* {
+  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline overline dotted blue;
+  font-size: 300%;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
+
+#listtiga {
+  color: aqua;
+}
+
+.mark {
+  background-color: bisque;
+}
+
+.special p {
+  background-color: azure;
+}
+
+/* direct descendant */
+
+.special2 > p {
+  background-color: azure;
+}
+
+/* adjection */
+a + button {
+  background-color: darkcyan;
+}
+
+input[type="text"] {
+  color: red;
+}
+
+button:hover {
+  background-color: brown;
+}
