@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      .merah {
+        color: red;
+      }
+      .biru {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kota tujuan anda</h1>
+    <ul id="destinasi" class="destinasi">
+      <!-- <p>Pilih destinasi anda</p> -->
+      <li class="bandung">
+        Bandung
+        <button id="keBandung">Pergi!</button>
+        <button id="hideBandung">Sembunyikan!</button>
+      </li>
+      <li class="jakarta">
+        Jakarta
+        <button id="keJakarta">Pergi!</button>
+      </li>
+      <li class="surabaya">Surabaya</li>
+      <!-- <li class="diskon">
+        <h2>Bali</h2>
+        <button>Get Price</button>
+      </li> -->
+
+      <button id="toggleBandung">Test</button>
+      <button id="gantiBiru">Jadi biru!</button>
+      <button id="gantiMerah">Jadi merah!</button>
+    </ul>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //     $("#destinasi > li").text("Bali");
+        //   });
+        // let price = $("<p>From $399.99</p>");
+        // $(".diskon").after(price);
+        // let jogja = $("<li>Jogja</li>");
+        // $("#destinasi").append(jogja);
+
+        $("#keBandung").on("click", function () {
+          alert("Saya pergi ke Buandung");
+        });
+        $("#hideBandung").on("click", function () {
+          $(".bandung").fadeOut(1000);
+        });
+        $("#toggleBandung").on("click", function () {
+          $(".bandung").animate({
+            marginLeft: 20,
+          });
+        });
+
+        $("#gantiBiru").on("click", function () {
+          $(".bandung").removeClass().addClass("bandung biru");
+          //   $(".bandung").addClass("biru");
+        });
+        $("#gantiMerah").on("click", function () {
+          $(".bandung").removeClass().addClass("bandung merah");
+          //   $(".bandung").addClass("merah");
+        });
+
+        $("#keJakarta").on("click", function () {
+          $(".jakarta").remove();
+        });
+      });
+
+      //    $("button").click(function(){}
+    </script>
+  </body>
+</html>
