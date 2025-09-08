@@ -5,9 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1 class="font-mono font-bold text-6xl italic underline bg-blue-500 text-stone-300 p-8 text-center shadow-black-xl">Hello world!</h1>
+  <body class="bg-gray-50">
+    <!-- <h1 class="font-mono font-bold text-6xl italic underline bg-blue-500 text-stone-300 p-8 text-center shadow-black-xl">Hello world!</h1>
     <p class="p-8">Hai There</p>
-    <button class="bg-cyan-500 p-3 ml-8 rounded-4xl hover:bg-cyan-800 hover:text-white transition-all shadow-xl">Hai guys</button>
+    <button class="bg-cyan-500 p-3 ml-8 rounded-4xl hover:bg-cyan-800 hover:text-white transition-all shadow-xl">Hai guys</button> -->
+
+    <header class="px-8 py-4 bg-orange-600 mb-8">
+      <div class="flex justify-between">
+        <h1 class="text-3xl font-sans text-white">CODING<span class="font-sans font-bold text-3xl text-blue-100">DONK</span></h1>
+        <nav class="space-x-4 text-white text-lg">
+          <a href="#">Kenapa Kami</a>
+          <a href="#">Keunggulan</a>
+          <a href="#">Gabung</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 pb-8 text-center">
+      <div>
+        <h2 class="text-4xl font-bold leading-tight mb-8">Belajar ngoding sejak dini bersama <span class="text-orange-600 font-bold">CODINGDONK</span></h2>
+        <p class="font-sans text-gray-800">Ikuti kelas pemrograman dasar untuk mengasah kemampuan si kecil dengan mentor berpengalaman</p>
+      </div>
+      <div class="mt-16 text-white space-x-4">
+        <a href="#" class="border-2 text-orange-600 px-8 py-4 rounded-lg hover:bg-orange-600 hover:text-white"> Lihat Semua Kelas</a>
+        <a href="#" class="bg-orange-600 px-8 py-4 rounded-lg hover:bg-gray-500"> Daftar Sekarang</a>
+      </div>
+    </section>
+
+    <!-- Kenapa Section -->
+    <section class="py-18">
+      <div class="max-w-7xl mx-auto text-center bg-gray-100 p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-4">Kenapa Memilih <span class="text-orange-600 font-bold">CODINGDONK</span>?</h2>
+        <p class="text-gray-700 mb-8">Kami menyediakan platform belajar yang menyenangkan dan interaktif untuk anak-anak.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
+            <h3 class="font-semibold mb-2 group-hover:text-white">Mentor Berpengalaman</h3>
+            <p class="text-gray-600 group-hover:text-gray-200">Kami memiliki mentor yang ahli di bidangnya dan berpengalaman dalam mengajar anak-anak.</p>
+          </div>
+          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
+            <h3 class="font-semibold mb-2 group-hover:text-white">Kelas Interaktif</h3>
+            <p class="text-gray-600 group-hover:text-gray-100">Kelas kami dirancang agar interaktif dan menyenangkan, sehingga anak-anak tidak merasa bosan.</p>
+          </div>
+          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
+            <h3 class="font-semibold mb-2 group-hover:text-white">Sesi Konsultasi</h3>
+            <p class="text-gray-600 group-hover:text-gray-100">
+              Jika para orangtua bingung, kami menyediakan sesi konsultasi untuk membantu proses perkembangan anak agar maksimal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section class="py-8 bg-white">
+      <div class="max-w-7xl mx-auto text-center p-8 mb-16">
+        <h2 class="text-3xl font-bold mb-4">Keunggulan Kami</h2>
+        <p class="text-gray-700 mb-8">Kami menawarkan berbagai keunggulan yang membuat pengalaman belajar anak-anak menjadi lebih baik.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div
+            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+          >
+            <h3 class="font-semibold mb-2 group-hover:text-white">Materi Lengkap</h3>
+            <p class="text-gray-600 group-hover:text-gray-100">
+              Kami menyediakan materi yang lengkap dan terstruktur untuk membantu anak-anak memahami konsep pemrograman dengan mudah.
+            </p>
+          </div>
+          <div
+            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+          >
+            <h3 class="font-semibold mb-2 group-hover:text-white">Fleksibilitas Waktu</h3>
+            <p class="text-gray-600 group-hover:text-gray-100">
+              Kelas kami dapat diakses kapan saja dan di mana saja, sehingga anak-anak dapat belajar sesuai dengan jadwal mereka.
+            </p>
+          </div>
+          <div
+            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+          >
+            <h3 class="font-semibold mb-2 group-hover:text-white">Komunitas Supportive</h3>
+            <p class="text-gray-600 group-hover:text-gray-100">
+              Kami memiliki komunitas yang supportive di mana anak-anak dapat berbagi pengalaman dan belajar bersama teman-teman sebayanya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 text-center bg-orange-600 text-white">
+      <div>
+        <h2 class="text-2xl font-bold">Siap berkarir sebagai programer?</h2>
+        <p class="mt-4 mb-8">Jangan tunda lagi, daftarkan anak Anda sekarang juga! Semakin cepat mendaftar, semakin banyak manfaat yang didapatkan.</p><br>
+        <a href="#" class="bg-white text-black px-8 py-4 rounded-lg hover:bg-gray-200 transition transition duration-300">Daftar Sekarang</a>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center py-2">
+      <p>&copy; 2024 CODINGDONK. All rights reserved.</p>
   </body>
 </html>
