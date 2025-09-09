@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -10,13 +10,17 @@
     <p class="p-8">Hai There</p>
     <button class="bg-cyan-500 p-3 ml-8 rounded-4xl hover:bg-cyan-800 hover:text-white transition-all shadow-xl">Hai guys</button> -->
 
-    <header class="px-8 py-4 bg-orange-600 mb-8">
-      <div class="flex justify-between">
-        <h1 class="text-3xl font-sans text-white">CODING<span class="font-sans font-bold text-3xl text-blue-100">DONK</span></h1>
-        <nav class="space-x-4 text-white text-lg">
-          <a href="#">Kenapa Kami</a>
-          <a href="#">Keunggulan</a>
-          <a href="#">Gabung</a>
+    <header class="mb-8 bg-orange-600 px-8 py-4">
+      <div class="flex justify-between max-sm:block max-sm:text-center">
+        <h1 class="font-sans text-3xl text-white">
+          CODING<span class="font-sans text-3xl font-bold text-blue-100"
+            >DONK</span
+          >
+        </h1>
+        <nav class="space-x-4 text-lg text-white max-sm:hidden">
+          <a href="#sectionKenapaKami">Kenapa Kami</a>
+          <a href="#sectionKeunggulan">Keunggulan</a>
+          <a href="#sectionCTA">Gabung</a>
         </nav>
       </div>
     </header>
@@ -24,33 +28,179 @@
     <!-- Hero Section -->
     <section class="pt-16 pb-8 text-center">
       <div>
-        <h2 class="text-4xl font-bold leading-tight mb-8">Belajar ngoding sejak dini bersama <span class="text-orange-600 font-bold">CODINGDONK</span></h2>
-        <p class="font-sans text-gray-800">Ikuti kelas pemrograman dasar untuk mengasah kemampuan si kecil dengan mentor berpengalaman</p>
+        <h2 class="mb-8 text-4xl leading-tight font-bold text-black">
+          Belajar ngoding sejak dini bersama
+          <span class="font-bold text-orange-600">CODINGDONK</span>
+        </h2>
+        <p
+          class="mx-4 pb-8 text-center font-sans text-gray-800 sm:mx-8 md:mx-auto"
+        >
+          Ikuti kelas pemrograman dasar untuk mengasah kemampuan si kecil dengan
+          mentor berpengalaman.
+        </p>
       </div>
-      <div class="mt-16 text-white space-x-4">
-        <a href="#" class="border-2 text-orange-600 px-8 py-4 rounded-lg hover:bg-orange-600 hover:text-white"> Lihat Semua Kelas</a>
-        <a href="#" class="bg-orange-600 px-8 py-4 rounded-lg hover:bg-gray-500"> Daftar Sekarang</a>
+      <div>
+        <p class="pb-8 text-center text-3xl font-bold text-black">
+          🎉 Spesial Tahun Ajaran Baru! Nikmati
+          <span class="text-red-600">DISKON 50%</span> untuk waktu terbatas
+          🚀<br />
+          Jangan lewatkan kesempatan ini, segera daftar sekarang!
+        </p>
+
+        <!-- Waktu -->
+        <div
+          class="grid auto-cols-max grid-flow-col items-center justify-center gap-4 text-center"
+        >
+          <div class="flex flex-col rounded-lg bg-black p-2 text-white">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 15" aria-live="polite" aria-label="15"
+                >15</span
+              >
+            </span>
+            days
+          </div>
+          <div class="flex flex-col rounded-lg bg-black p-2 text-white">
+            <span class="countdown font-mono text-5xl">
+              <span style="--value: 10" aria-live="polite" aria-label="10"
+                >10</span
+              >
+            </span>
+            hours
+          </div>
+          <div class="flex flex-col rounded-lg bg-black p-2 text-white">
+            <span class="countdown font-mono text-5xl">
+              <span id="minutes" class="w-14" style="--value: 59">59</span>
+            </span>
+            min
+          </div>
+          <div class="flex flex-col rounded-lg bg-black p-2 text-white">
+            <span class="countdown font-mono text-5xl">
+              <span
+                id="seconds"
+                class="inline-block w-14 text-center"
+                style="--value: 59"
+                >59</span
+              >
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 space-x-4 text-white">
+        <a
+          href="#kelasModal"
+          class="rounded-lg border-2 px-8 py-4 text-orange-600 hover:bg-orange-600 hover:text-white"
+        >
+          Lihat Semua Kelas
+        </a>
+
+        <a
+          href="#"
+          class="rounded-lg bg-orange-600 px-8 py-4 hover:bg-gray-500"
+        >
+          Daftar Sekarang</a
+        >
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="kelasModal">
+        <div class="modal-box w-11/12 max-w-5xl rounded-2xl bg-indigo-500">
+          <h3 class="mb-4 text-lg font-bold">Daftar Kelas 🚀</h3>
+
+          <!-- Grid Cards -->
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Card 1 -->
+            <div class="card shadow-xl">
+              <div class="card-body rounded-2xl bg-sky-700">
+                <h2 class="card-title justify-center">Kelas Web Development</h2>
+                <p>
+                  Belajar HTML, CSS, dan JavaScript dari dasar sampai mahir.
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Ikuti</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card shadow-xl">
+              <div class="card-body rounded-2xl bg-green-800">
+                <h2 class="card-title justify-center">Kelas UI/UX Design</h2>
+                <p>
+                  Pahami dasar desain hingga pembuatan prototipe interaktif.
+                </p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Ikuti</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card shadow-xl">
+              <div class="card-body rounded-2xl bg-purple-700">
+                <h2 class="card-title justify-center">Kelas Data Science</h2>
+                <p>Pelajari Python, analisis data, dan machine learning.</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Ikuti</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Close Button -->
+          <div class="modal-action">
+            <a href="#" class="btn border-0 bg-red-700">Tutup</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Kenapa Section -->
-    <section class="py-18">
-      <div class="max-w-7xl mx-auto text-center bg-gray-100 p-8 rounded-lg shadow-lg">
-        <h2 class="text-3xl font-bold mb-4">Kenapa Memilih <span class="text-orange-600 font-bold">CODINGDONK</span>?</h2>
-        <p class="text-gray-700 mb-8">Kami menyediakan platform belajar yang menyenangkan dan interaktif untuk anak-anak.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
-            <h3 class="font-semibold mb-2 group-hover:text-white">Mentor Berpengalaman</h3>
-            <p class="text-gray-600 group-hover:text-gray-200">Kami memiliki mentor yang ahli di bidangnya dan berpengalaman dalam mengajar anak-anak.</p>
+    <section id="sectionKenapaKami" class="py-8">
+      <div
+        class="mx-auto max-w-7xl rounded-lg bg-gray-200 p-8 text-center shadow-lg"
+      >
+        <h2 class="mb-4 text-3xl font-bold text-black">
+          Kenapa Memilih
+          <span class="font-bold text-orange-600">CODINGDONK</span>?
+        </h2>
+        <p class="mb-8 text-gray-700">
+          Kami menyediakan platform belajar yang menyenangkan dan interaktif
+          untuk anak-anak.
+        </p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div
+            class="group transform rounded-lg bg-white p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
+          >
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Mentor Berpengalaman
+            </h3>
+            <p class="text-gray-600 group-hover:text-gray-200">
+              Kami memiliki mentor yang ahli di bidangnya dan berpengalaman
+              dalam mengajar anak-anak.
+            </p>
           </div>
-          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
-            <h3 class="font-semibold mb-2 group-hover:text-white">Kelas Interaktif</h3>
-            <p class="text-gray-600 group-hover:text-gray-100">Kelas kami dirancang agar interaktif dan menyenangkan, sehingga anak-anak tidak merasa bosan.</p>
-          </div>
-          <div class="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10">
-            <h3 class="font-semibold mb-2 group-hover:text-white">Sesi Konsultasi</h3>
+          <div
+            class="group transform rounded-lg bg-white p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
+          >
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Kelas Interaktif
+            </h3>
             <p class="text-gray-600 group-hover:text-gray-100">
-              Jika para orangtua bingung, kami menyediakan sesi konsultasi untuk membantu proses perkembangan anak agar maksimal.
+              Kelas kami dirancang agar interaktif dan menyenangkan, sehingga
+              anak-anak tidak merasa bosan.
+            </p>
+          </div>
+          <div
+            class="group transform rounded-lg bg-white p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
+          >
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Sesi Konsultasi
+            </h3>
+            <p class="text-gray-600 group-hover:text-gray-100">
+              Jika para orangtua bingung, kami menyediakan sesi konsultasi untuk
+              membantu proses perkembangan anak agar maksimal.
             </p>
           </div>
         </div>
@@ -58,33 +208,45 @@
     </section>
 
     <!-- Keunggulan Section -->
-    <section class="py-8 bg-white">
-      <div class="max-w-7xl mx-auto text-center p-8 mb-16">
-        <h2 class="text-3xl font-bold mb-4">Keunggulan Kami</h2>
-        <p class="text-gray-700 mb-8">Kami menawarkan berbagai keunggulan yang membuat pengalaman belajar anak-anak menjadi lebih baik.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <section id="sectionKeunggulan" class="bg-white py-8">
+      <div class="mx-auto mb-16 max-w-7xl p-8 text-center">
+        <h2 class="mb-4 text-3xl font-bold text-black">Keunggulan Kami</h2>
+        <p class="mb-8 text-gray-700">
+          Kami menawarkan berbagai keunggulan yang membuat pengalaman belajar
+          anak-anak menjadi lebih baik.
+        </p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
           <div
-            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+            class="group bg-gray- transform rounded-lg border-3 border-orange-400 p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
           >
-            <h3 class="font-semibold mb-2 group-hover:text-white">Materi Lengkap</h3>
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Materi Lengkap
+            </h3>
             <p class="text-gray-600 group-hover:text-gray-100">
-              Kami menyediakan materi yang lengkap dan terstruktur untuk membantu anak-anak memahami konsep pemrograman dengan mudah.
+              Kami menyediakan materi yang lengkap dan terstruktur untuk
+              membantu anak-anak memahami konsep pemrograman dengan mudah.
             </p>
           </div>
           <div
-            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+            class="group transform rounded-lg border-3 border-orange-400 bg-gray-50 p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:bg-orange-500 hover:shadow-xl"
           >
-            <h3 class="font-semibold mb-2 group-hover:text-white">Fleksibilitas Waktu</h3>
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Fleksibilitas Waktu
+            </h3>
             <p class="text-gray-600 group-hover:text-gray-100">
-              Kelas kami dapat diakses kapan saja dan di mana saja, sehingga anak-anak dapat belajar sesuai dengan jadwal mereka.
+              Kelas kami dapat diakses kapan saja dan di mana saja, sehingga
+              anak-anak dapat belajar sesuai dengan jadwal mereka.
             </p>
           </div>
           <div
-            class="group bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-orange-500 transition duration-300 transform hover:scale-105 hover:z-10"
+            class="group transform rounded-lg border-3 border-orange-400 bg-gray-100 p-6 shadow-md transition duration-300 hover:z-10 hover:scale-105 hover:border-0 hover:bg-orange-500 hover:shadow-xl"
           >
-            <h3 class="font-semibold mb-2 group-hover:text-white">Komunitas Supportive</h3>
+            <h3 class="mb-2 font-semibold text-black group-hover:text-white">
+              Komunitas Supportive
+            </h3>
             <p class="text-gray-600 group-hover:text-gray-100">
-              Kami memiliki komunitas yang supportive di mana anak-anak dapat berbagi pengalaman dan belajar bersama teman-teman sebayanya.
+              Kami memiliki komunitas yang supportive di mana anak-anak dapat
+              berbagi pengalaman dan belajar bersama teman-teman sebayanya.
             </p>
           </div>
         </div>
@@ -92,14 +254,57 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 text-center bg-orange-600 text-white">
+    <section id="sectionCTA" class="bg-orange-600 py-8 text-center text-white">
       <div>
-        <h2 class="text-2xl font-bold">Siap berkarir sebagai programer?</h2>
-        <p class="mt-4 mb-8">Jangan tunda lagi, daftarkan anak Anda sekarang juga! Semakin cepat mendaftar, semakin banyak manfaat yang didapatkan.</p><br>
-        <a href="#" class="bg-white text-black px-8 py-4 rounded-lg hover:bg-gray-200 transition transition duration-300">Daftar Sekarang</a>
+        <h2 class="text-3xl font-bold">Siap berkarir sebagai programer?</h2>
+        <p class="mt-4 mb-8">
+          Jangan tunda lagi, daftarkan anak Anda sekarang juga! Semakin cepat
+          mendaftar, semakin banyak manfaat yang didapatkan.
+        </p>
+        <a
+          href="#"
+          class="rounded-lg bg-white px-8 py-4 font-semibold text-black transition duration-300 hover:bg-gray-300"
+          >Daftar Sekarang</a
+        >
+      </div>
     </section>
 
-    <footer class="bg-gray-800 text-white text-center py-2">
-      <p>&copy; 2024 CODINGDONK. All rights reserved.</p>
+    <footer class="bg-gray-600 py-2 text-center text-white">
+      <p>
+        &copy; 2025 CODINGDONK. Dibuat dengan Usaha, Daisy UI, dan Tailwind CSS.
+      </p>
+    </footer>
+
+    <script>
+      let minutes = 59;
+      let seconds = 59;
+
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      function updateCountdown() {
+        seconds--;
+
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+
+          if (minutes < 0) {
+            minutes = 59; // reset lagi
+          }
+        }
+
+        // update tampilan
+        minutesEl.style.setProperty("--value", minutes);
+        secondsEl.style.setProperty("--value", seconds);
+
+        // penting: update teks juga biar kelihatan berubah
+        minutesEl.innerText = minutes;
+        secondsEl.innerText = seconds;
+      }
+
+      // jalanin setiap 1 detik
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
