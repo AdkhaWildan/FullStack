@@ -1,0 +1,41 @@
+.body {
+  font: 100% "Alan Sans", sans-serif;
+}
+
+.navbar {
+  background-color: #bbdce5;
+  color: white;
+  height: 30px;
+}
+
+.header {
+  background-color: #eceedf;
+  color: #cfab8d;
+  height: 150px;
+}
+
+.about {
+  background-color: blue;
+  color: #cfab8d;
+  height: 100px;
+}
+
+.product {
+  background-color: indigo;
+  color: #cfab8d;
+  height: 300px;
+}
+
+.contact {
+  background-color: green;
+  color: #cfab8d;
+  height: 50px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 20px;
+}
+
+/*# sourceMappingURL=output.css.map */

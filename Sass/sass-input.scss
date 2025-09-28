@@ -1,0 +1,45 @@
+$bg-color: #eceedf;
+$main-color: #bbdce5;
+$secondary-color: #d9c4b0;
+$text-color: #cfab8d;
+$main-font: "Alan Sans", sans-serif;
+
+.body {
+  font: 100% $main-font;
+}
+
+.navbar {
+  background-color: $main-color;
+  color: white;
+  height: 30px;
+}
+
+.header {
+  background-color: $bg-color;
+  color: $text-color;
+  height: 150px;
+}
+
+.about {
+  background-color: blue;
+  color: $text-color;
+  height: 100px;
+}
+
+.product {
+  background-color: indigo;
+  color: $text-color;
+  height: 300px;
+}
+
+.contact {
+  background-color: green;
+  color: $text-color;
+  height: 50px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 20px;
+}
