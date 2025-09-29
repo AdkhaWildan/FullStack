@@ -41,9 +41,79 @@
 }
 
 .header {
-  background-color: #eceedf;
+  background-color: #f3f1ed;
+  background-image: url("img/Header_Image.jpg");
+  background-size: contain;
   color: #cfab8d;
-  height: 150px;
+  height: 400px;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-left: 15%;
+  border-top: 1px solid #cfab8d;
+  border-bottom: 1px solid #cfab8d;
+}
+
+.text-header {
+  text-align: center;
+}
+.text-header h1 {
+  text-shadow: 2px;
+  font-size: 64px;
+  font-weight: 700;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
+.text-header h3 {
+  font-size: 48px;
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #d9c4b0;
+}
+.text-header hr {
+  width: 1000px;
+  margin: auto;
+  border-color: #bbdce5;
+  margin-bottom: 10px;
+}
+.text-header p {
+  color: black;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.button-basic, .button-offer, .button-signup {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+  font: "Alan Sans", sans-serif;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.button-signup {
+  color: white;
+  background-color: #bbdce5;
+  margin-right: 20px;
+}
+.button-signup:hover {
+  background-color: grey;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.button-offer {
+  color: black;
+  background-color: #d9c4b0;
+  margin-left: 20px;
+}
+.button-offer:hover {
+  background-color: grey;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .about {

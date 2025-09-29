@@ -50,9 +50,85 @@ $main-font: "Alan Sans", sans-serif;
 }
 
 .header {
-  background-color: $bg-color;
+  background-color: #f3f1ed;
+  background-image: url("img/Header_Image.jpg");
+  background-size: contain;
   color: $text-color;
-  height: 150px;
+  height: 400px;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-left: 15%;
+  border-top: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+}
+
+.text-header {
+  text-align: center;
+
+  h1 {
+    text-shadow: 2px;
+    font-size: 64px;
+    font-weight: 700;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 48px;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+
+  hr {
+    width: 1000px;
+    margin: auto;
+    border-color: $main-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: black;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+  font: $main-font;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.button-signup {
+  @extend.button-basic;
+  color: white;
+  background-color: $main-color;
+  margin-right: 20px;
+  &:hover {
+    background-color: grey;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+}
+
+.button-offer {
+  @extend.button-basic;
+  color: black;
+  background-color: $secondary-color;
+  margin-left: 20px;
+  &:hover {
+    background-color: grey;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
 }
 
 .about {
