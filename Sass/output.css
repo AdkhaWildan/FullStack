@@ -1,11 +1,43 @@
 .body {
   font: 100% "Alan Sans", sans-serif;
+  margin: 0;
 }
 
 .navbar {
   background-color: #bbdce5;
   color: white;
-  height: 30px;
+  height: 40px;
+}
+.navbar a {
+  color: white;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.navbar a img {
+  height: 35px;
+  width: auto;
+  padding: 0px;
+}
+.navbar a:hover {
+  color: #cfab8d;
+  background-color: #d9c4b0;
+  border-radius: 8px;
+}
+.navbar .logo {
+  padding: 0px;
+}
+.navbar .logo:hover {
+  background-color: transparent;
+  color: inherit;
+  border-radius: 0px;
+}
+.navbar .link {
+  float: right;
+  width: auto;
+  display: block;
 }
 
 .header {

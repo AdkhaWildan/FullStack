@@ -6,12 +6,47 @@ $main-font: "Alan Sans", sans-serif;
 
 .body {
   font: 100% $main-font;
+  margin: 0;
 }
 
 .navbar {
   background-color: $main-color;
   color: white;
-  height: 30px;
+  height: 40px;
+  a {
+    color: white;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    img {
+      height: 35px;
+      width: auto;
+      padding: 0px;
+    }
+  }
+
+  a:hover {
+    color: $text-color;
+    background-color: $secondary-color;
+    border-radius: 8px;
+  }
+  .logo {
+    padding: 0px;
+  }
+
+  .logo:hover {
+    background-color: transparent;
+    color: inherit;
+    border-radius: 0px;
+  }
+
+  .link {
+    float: right;
+    width: auto;
+    display: block;
+  }
 }
 
 .header {
