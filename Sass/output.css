@@ -116,10 +116,49 @@
   transform: translateY(-2px);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+
+.left-item {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.right-item {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
 .about {
-  background-color: blue;
+  background-color: #eceedf;
   color: #cfab8d;
-  height: 100px;
+  height: 300px;
+}
+.about img {
+  border-radius: 100%;
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+}
+.about h4 {
+  text-shadow: 1px 1px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.about h5 {
+  font-size: 16px;
+}
+.about p {
+  font-size: 18px;
+}
+
+.right-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding-left: 20px;
 }
 
 .product {

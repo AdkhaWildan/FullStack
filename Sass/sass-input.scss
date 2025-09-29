@@ -131,10 +131,52 @@ $main-font: "Alan Sans", sans-serif;
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+
+@mixin item($start, $end) {
+  grid-column-start: $start;
+  grid-column-end: $end;
+}
+
+.left-item {
+  @include item(1, 2);
+}
+
+.right-item {
+  @include item(2, 3);
+}
+
 .about {
-  background-color: blue;
+  background-color: $bg-color;
   color: $text-color;
-  height: 100px;
+  height: 300px;
+  img {
+    border-radius: 100%;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+  }
+  h4 {
+    text-shadow: 1px 1px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.right-item {
+  background-color: rgba(white, 0.5);
+  border-radius: 20px;
+  padding-left: 20px;
 }
 
 .product {
