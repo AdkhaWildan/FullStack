@@ -1,12 +1,12 @@
-.body {
-  font: 100% "Alan Sans", sans-serif;
+body {
+  font: "Alan Sans", sans-serif;
   margin: 0;
 }
 
 .navbar {
   background-color: #bbdce5;
+  overflow: hidden;
   color: white;
-  height: 40px;
 }
 .navbar a {
   color: white;
@@ -40,12 +40,23 @@
   display: block;
 }
 
+@media screen and (max-width: 800px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .navbar .link {
+    float: none;
+    width: 100%;
+  }
+}
 .header {
   background-color: #f3f1ed;
   background-image: url("img/Header_Image.jpg");
-  background-size: contain;
+  background-size: cover;
   color: #cfab8d;
-  height: 400px;
+  min-height: 400px;
+  padding: 60px 5vw;
   background-repeat: no-repeat;
   position: relative;
   padding-left: 15%;
@@ -58,33 +69,33 @@
 }
 .text-header h1 {
   text-shadow: 2px;
-  font-size: 64px;
+  font-size: clamp(28px, 6vw, 64px);
   font-weight: 700;
   padding-bottom: 0px;
   margin-bottom: 0;
 }
 .text-header h3 {
-  font-size: 48px;
+  font-size: clamp(20px, 4vw, 48px);
   font-weight: 200;
   margin-top: 0;
   margin-bottom: 10px;
   color: #d9c4b0;
 }
 .text-header hr {
-  width: 1000px;
+  width: 80%;
   margin: auto;
   border-color: #bbdce5;
   margin-bottom: 10px;
 }
 .text-header p {
   color: black;
-  font-size: 32px;
+  font-size: clamp(14px, 3vw, 32px);
   margin-bottom: 50px;
 }
 
-.button-basic, .button-explore, .button-offer, .button-signup {
+.button-signup {
   border: none;
-  padding: 15px 30px;
+  padding: 15px 15px;
   text-align: center;
   font-size: 28px;
   cursor: pointer;
@@ -93,7 +104,13 @@
   border-radius: 15px;
   margin-top: 30px;
 }
-
+@media (max-width: 500px) {
+  .button-signup {
+    padding: 12px 20px; /* lebih kecil */
+    font-size: 18px; /* text ikut kecil */
+    border-radius: 8px; /* opsional biar proporsional */
+  }
+}
 .button-signup {
   color: white;
   background-color: #bbdce5;
@@ -106,6 +123,24 @@
 }
 
 .button-offer {
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+  font: "Alan Sans", sans-serif;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .button-offer {
+    padding: 12px 20px; /* lebih kecil */
+    font-size: 18px; /* text ikut kecil */
+    border-radius: 8px; /* opsional biar proporsional */
+  }
+}
+.button-offer {
   color: black;
   background-color: #d9c4b0;
   margin-left: 20px;
@@ -117,48 +152,65 @@
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 20px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .left-item {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  width: 30%;
+  float: left;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 800px) {
+  .left-item {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+.left-item {
+  text-align: center;
 }
 
 .right-item {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 800px) {
+  .right-item {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+.right-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .about {
   background-color: #eceedf;
   color: #cfab8d;
-  height: 300px;
+  padding: 40px 5vw;
+  box-sizing: border-box;
 }
 .about img {
   border-radius: 100%;
-  padding: 20px;
-  width: 150px;
-  height: 150px;
-}
-.about h4 {
-  text-shadow: 1px 1px;
-  font-size: 24px;
-  font-weight: 400;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  padding-bottom: 32px;
 }
 .about h5 {
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: 0;
 }
 .about p {
   font-size: 18px;
-}
-
-.right-item {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  padding-left: 20px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .product {
@@ -168,7 +220,8 @@
 }
 
 .text-header {
-  padding-top: 30px;
+  padding-top: 20px;
+  font-size: clamp(28px, 6vw, 64px);
 }
 
 .image-style, .product-body .product-item img {
@@ -181,14 +234,12 @@
 
 .product-body {
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  padding: 16px 0px 16px 0px;
+  border-radius: 24px;
+  padding: 16px;
   display: flex;
-  align-items: stretch;
-  justify-content: space-around;
-  margin-top: 8px;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
 }
 @media screen and (max-width: 800px) {
   .product-body {
@@ -199,29 +250,36 @@
   background-color: wheat;
   color: gray;
   box-shadow: 0 4px 8px 0 gray;
-  margin: 8px;
-  border-radius: 20px;
-  width: 340px;
+  border-radius: 16px;
+  flex: 1 1 200px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .product-body .product-item img {
   width: 90%;
-  height: 60%;
+  height: auto;
+  max-width: 100%;
 }
 .product-body .product-item .product-content {
   text-align: center;
-  padding-bottom: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0px 16px;
+  flex-grow: 1;
 }
 .product-body .product-item .product-content h5 {
-  font-size: 24px;
+  font-size: clamp(20px, 6vw, 32px);
 }
 .product-body .product-item .product-content p {
-  font-size: 20px;
+  font-size: clamp(16px, 6vw, 28px);
 }
 .product-body .product-item .product-footer {
   padding: 20px;
-  margin-top: 10px;
+  margin-top: auto;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
   text-align: center;
 }
 @media screen and (max-width: 800px) {
@@ -231,8 +289,33 @@
 }
 
 .button-explore {
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 28px;
+  cursor: pointer;
+  font: "Alan Sans", sans-serif;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .button-explore {
+    padding: 12px 20px; /* lebih kecil */
+    font-size: 18px; /* text ikut kecil */
+    border-radius: 8px; /* opsional biar proporsional */
+  }
+}
+.button-explore {
   color: black;
   background-color: #d9c4b0;
+}
+@media (max-width: 500px) {
+  .button-explore {
+    padding: 12px 20px; /* lebih kecil */
+    font-size: 16px; /* text ikut kecil */
+    border-radius: 8px; /* opsional biar proporsional */
+  }
 }
 .button-explore:hover {
   background-color: grey;
@@ -243,7 +326,7 @@
 .contact {
   background-color: green;
   color: #cfab8d;
-  height: 50px;
+  height: auto;
 }
 
 .footer {
