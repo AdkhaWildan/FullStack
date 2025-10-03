@@ -398,8 +398,10 @@ body {
 .footer {
   background-color: black;
   color: white;
-  height: 40px;
-  justify-content: center;
+  height: 20px;
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=output.css.map */
