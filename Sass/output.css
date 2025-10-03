@@ -106,9 +106,9 @@ body {
 }
 @media (max-width: 500px) {
   .button-signup {
-    padding: 12px 20px; /* lebih kecil */
-    font-size: 18px; /* text ikut kecil */
-    border-radius: 8px; /* opsional biar proporsional */
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
   }
 }
 .button-signup {
@@ -135,9 +135,9 @@ body {
 }
 @media (max-width: 500px) {
   .button-offer {
-    padding: 12px 20px; /* lebih kecil */
-    font-size: 18px; /* text ikut kecil */
-    border-radius: 8px; /* opsional biar proporsional */
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
   }
 }
 .button-offer {
@@ -217,6 +217,7 @@ body {
   background-color: #eceedf;
   color: #cfab8d;
   padding-top: 16px;
+  padding-bottom: 64px;
 }
 
 .text-header {
@@ -235,7 +236,9 @@ body {
 .product-body {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 24px;
-  padding: 16px;
+  margin: 0 16vw;
+  padding: 8px;
+  padding-bottom: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -244,6 +247,7 @@ body {
 @media screen and (max-width: 800px) {
   .product-body {
     flex-direction: column;
+    margin: 0 2vw;
   }
 }
 .product-body .product-item {
@@ -301,9 +305,9 @@ body {
 }
 @media (max-width: 500px) {
   .button-explore {
-    padding: 12px 20px; /* lebih kecil */
-    font-size: 18px; /* text ikut kecil */
-    border-radius: 8px; /* opsional biar proporsional */
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
   }
 }
 .button-explore {
@@ -324,15 +328,78 @@ body {
 }
 
 .contact {
-  background-color: green;
-  color: #cfab8d;
-  height: auto;
+  background-image: url("img/TailorItems.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 50px;
+}
+.contact .info-body {
+  width: 70%;
+  background-color: rgba(236, 238, 223, 0.9);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  padding: 30px;
+}
+@media screen and (max-width: 500px) {
+  .contact .info-body {
+    width: 85%;
+  }
+}
+.contact .info-body .info-header {
+  text-align: left;
+  padding-left: 64px;
+  padding-bottom: 32px;
+}
+.contact .info-body .info-header h2 {
+  font-size: clamp(24px, 6vw, 36px);
+}
+.contact .info-body .info-header p {
+  margin-bottom: 16px;
+  font-size: clamp(16px, 4vw, 28px);
+}
+.contact .info-body .info-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  text-align: center;
+  gap: 64px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 1150px) {
+  .contact .info-body .info-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact .info-body .info-content .info-item {
+    width: 100%;
+  }
+}
+.contact .info-body .info-content .info-item {
+  border: 4px solid #cfab8d;
+  border-radius: 24px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1150px) {
+  .contact .info-body .info-content .info-item {
+    width: 100%;
+  }
+}
+.contact .info-body .info-content .info-item h5 {
+  font-size: clamp(20px, 6vw, 32px);
+}
+.contact .info-body .info-content .info-item p {
+  font-size: clamp(16px, 6vw, 28px);
 }
 
 .footer {
   background-color: black;
   color: white;
-  height: 20px;
+  height: 40px;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=output.css.map */
