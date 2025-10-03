@@ -392,7 +392,11 @@ body {
   font-size: clamp(20px, 6vw, 32px);
 }
 .contact .info-body .info-content .info-item p {
+  justify-content: center;
   font-size: clamp(16px, 6vw, 28px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer {
