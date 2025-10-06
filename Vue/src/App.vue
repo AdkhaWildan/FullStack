@@ -1,11 +1,57 @@
-<script setup>
+<script>
 import { ref } from "vue";
-const count = ref(0);
+
+export default {
+  // Options API
+  // data() {
+  //   return {
+  //     count: 0,
+  //   };
+  // },
+
+  // methods: {
+  //   decrease() {
+  //     this.count--;
+  //   },
+  //   increase() {
+  //     this.count++;
+  //   },
+  // },
+
+  // Composition API
+  setup() {
+    const count = ref(0);
+
+    function decrease() {
+      count.value--;
+    }
+
+    function increase() {
+      count.value++;
+    }
+
+    return {
+      count,
+      decrease,
+      increase,
+    };
+  },
+};
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the documentation</p>
+  <main>
+    <div>
+      <h1>Counter</h1>
+      <span id="value">{{ count }}</span>
+      <div>
+        <!-- <button @click="decrease()" id="decrease">-</button>
+        <button @click="increase()" id="increase">+</button> -->
+        <button @click="decrease()" id="decrease">-</button>
+        <button @click="increase()" id="increase">+</button>
+      </div>
+    </div>
+  </main>
 </template>
 
 <style scoped></style>
