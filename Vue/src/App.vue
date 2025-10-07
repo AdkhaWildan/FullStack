@@ -39,7 +39,7 @@ export default {
 };
 </script> -->
 
-<script setup>
+<!-- <script setup>
 import { ref } from "vue";
 const showForm = ref(false);
 const newMemo = ref("");
@@ -64,7 +64,23 @@ function addMemo() {
 function deleteMemo(id) {
   memos.value = memos.value.filter((memo) => memo.id !== id);
 }
+</script> -->
+
+<script setup>
+import { ref, watch } from "vue";
+import dataQuiz from "./data-quizes.json";
+import quizCard from "./components/quiz-card.vue";
+
+const quizes = ref(dataQuiz);
+const search = ref("");
+
+watch(search, () => {
+  quizes.value = dataQuiz.filter((quiz) => {
+    return quiz.title.toLowerCase().includes(search.value.toLowerCase());
+  });
+});
 </script>
+
 <template>
   <!-- <main>
     <div>
@@ -79,7 +95,7 @@ function deleteMemo(id) {
     </div>
   </main> -->
 
-  <main>
+  <!-- <main>
     <div class="container">
       <header>
         <h1 class="header-title">Memo</h1>
@@ -110,10 +126,52 @@ function deleteMemo(id) {
         <button @click="addMemo()" class="form-save-btn">Save</button>
       </div>
     </div>
+  </main> -->
+
+  <main>
+    <header>
+      <h1 id="title">Quizi</h1>
+      <input v-model="search" type="text" id="search-input" />
+    </header>
+    <section id="quiz-container">
+      <quiz-card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" v-bind:quizes="quizes" />
+    </section>
   </main>
 </template>
 
 <style scoped>
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#title {
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+#search-input {
+  border: none;
+  background-color: beige;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#quiz-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+</style>
+
+<!-- <style scoped>
 main {
   width: 100vw;
   height: 100vh;
@@ -233,4 +291,4 @@ header {
 .form-error {
   color: red;
 }
-</style>
+</style> -->
