@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { RouterView } from "vue-router";
 import Nav from "./components/Nav.vue";
 </script>
@@ -6,6 +6,21 @@ import Nav from "./components/Nav.vue";
 <template>
   <Nav />
   <RouterView />
+</template> -->
+
+<script setup>
+import { RouterView } from "vue-router";
+</script>
+
+<template>
+  <main class="container">
+    <RouterView />
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+main {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+</style>
