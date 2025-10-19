@@ -1,0 +1,87 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Artikel Pertama",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
+      "tags": [
+        "web",
+        "vue",
+        "node"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Artikel Kedua",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
+      "tags": [
+        "js",
+        "html",
+        "css"
+      ]
+    },
+    {
+      "title": "Artikel ke tiga",
+      "body": "Isi dari artikel tiga",
+      "tags": [
+        "vue",
+        "firebase"
+      ],
+      "id": "3"
+    },
+    {
+      "title": "Artikel ke empat",
+      "body": "isi artikel ke empat",
+      "tags": [
+        "vue"
+      ],
+      "id": "4"
+    },
+    {
+      "title": "Create post from clean blog",
+      "body": "Ini adalah isi post dari clean blog yang sudah diintegrasikan di dalam project vue cli",
+      "tags": [],
+      "id": "5"
+    },
+    {
+      "title": "Data baru",
+      "body": "Input body data baru",
+      "tags": [],
+      "id": "6"
+    },
+    {
+      "title": "Data post baru",
+      "body": "data post baru lagi",
+      "tags": [
+        "vue",
+        "firebase",
+        "bootstrap"
+      ],
+      "id": "7"
+    },
+    {
+      "id": "c2cc",
+      "title": "Artikel Kemarin",
+      "body": "isi content kemarin",
+      "tags": [
+        "vue js kemarin"
+      ]
+    },
+    {
+      "id": "a8b1",
+      "title": "Artikel Kemarin",
+      "body": "isi content kemarin",
+      "tags": [
+        "vue js kemarin"
+      ]
+    },
+    {
+      "id": "1f1d",
+      "title": "Coba",
+      "body": "postingan tumbal",
+      "tags": [
+        "html css postvue"
+      ]
+    }
+  ]
+}
