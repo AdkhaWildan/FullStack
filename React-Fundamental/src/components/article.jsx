@@ -1,17 +1,30 @@
-function Article() {
-  const name = "siapa";
-  const title = ["Vue JS", "React JS", "Next JS"];
+// function Article() {
+//   const name = "siapa";
+//   const title = ["Vue JS", "React JS", "Next JS"];
 
+//   return (
+//     <>
+//       <div>{name}</div>
+//       <div>
+//         {title.map((title) => {
+//           return (
+//             <>
+//               <div>{title}</div>
+//             </>
+//           );
+//         })}
+//       </div>
+//     </>
+//   );
+// }
+
+function Article(props) {
   return (
     <>
-      <div>{name}</div>
+      <div>{props.name}</div>
       <div>
-        {title.map((title) => {
-          return (
-            <>
-              <div>{title}</div>
-            </>
-          );
+        {props.titles.map((title) => {
+          return <div>{title}</div>;
         })}
       </div>
     </>

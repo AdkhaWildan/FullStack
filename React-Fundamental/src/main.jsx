@@ -7,6 +7,6 @@ import Article from "./components/article.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
-    <Article />
+    <Article name="Kamu" titles={["Vue JS", "React JS", "Next JS"]} />
   </StrictMode>
 );
