@@ -5,6 +5,8 @@ import "./App.css";
 
 import HomePage from "./pages/Index";
 
+import { GlobalContex } from "./context";
+
 // function App() {
 //   const [count, setCount] = useState(0)
 
@@ -35,9 +37,14 @@ import HomePage from "./pages/Index";
 // }
 
 function App() {
+  const user = {
+    username: "penulius",
+  };
   return (
     <div className="App">
-      <HomePage />
+      <GlobalContex.Provider value={user}>
+        <HomePage />
+      </GlobalContex.Provider>
     </div>
   );
 }

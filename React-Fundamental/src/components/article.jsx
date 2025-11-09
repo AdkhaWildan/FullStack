@@ -31,6 +31,9 @@
 //   );
 // }
 
+import { useContext } from "react";
+import { GlobalContex } from "../context";
+
 const ArticleStatus = ({ isNew }) => {
   return isNew && <span> -- Baru !!!</span>;
 };
@@ -40,6 +43,7 @@ const NewArticle = () => {
 };
 
 function Article(props) {
+  const user = useContext(GlobalContex);
   return (
     <>
       <div>
@@ -52,6 +56,9 @@ function Article(props) {
       <small>
         Date: {props.date} , tags: {props.tags.join(", ")}
       </small>
+      <div>
+        <small>Dibuat oleh : {user.username}</small>
+      </div>
     </>
   );
 }
