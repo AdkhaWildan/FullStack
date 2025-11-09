@@ -6,16 +6,18 @@ import { useState } from "react";
 
 function HomePage() {
   const [filteredPosts, setFilteredPosts] = useState(posts);
+  const [totalPost, setTotalPost] = useState(0);
 
   const onSearchChange = (value) => {
     const filtered = posts.filter((item) => item.title.includes(value));
     setFilteredPosts(filtered);
+    setTotalPost(filtered.length);
   };
 
   return (
     <>
       <h1>Simple Blog</h1>
-      <Search onSearchChange={onSearchChange} />
+      <Search onSearchChange={onSearchChange} totalPost={totalPost} />
 
       {/* {posts.map((blog) => (
         <Article key={blog.title} title={blog.title} tags={blog.tags} date={blog.date} />

@@ -31,10 +31,24 @@
 //   );
 // }
 
+const ArticleStatus = ({ isNew }) => {
+  return isNew && <span> -- Baru !!!</span>;
+};
+
+const NewArticle = () => {
+  return <span> -- Baru !!!</span>;
+};
+
 function Article(props) {
   return (
     <>
-      <div>{props.title}</div>
+      <div>
+        {props.title}
+        {/* {props.isNew ? "(Post Terbaru)" : " "} */}
+
+        <ArticleStatus isNew={props.isNew} />
+        {props.isNew && <NewArticle />}
+      </div>
       <small>
         Date: {props.date} , tags: {props.tags.join(", ")}
       </small>
