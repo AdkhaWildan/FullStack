@@ -6,6 +6,8 @@ import "./App.css";
 import HomePage from "./pages/Index";
 
 import { GlobalContex } from "./context";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../src/routers/Router";
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -43,7 +45,8 @@ function App() {
   return (
     <div className="App">
       <GlobalContex.Provider value={user}>
-        <HomePage />
+        {/* <HomePage /> */}
+        <RouterProvider router={router} />
       </GlobalContex.Provider>
     </div>
   );
