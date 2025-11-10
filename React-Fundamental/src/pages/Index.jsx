@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 function HomePage() {
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [totalPost, setTotalPost] = useState(0);
-  const [externalPosts, setExternalPosts] = useState([]);
+  // const [externalPosts, setExternalPosts] = useState([]);
 
   const onSearchChange = (value) => {
     const filtered = posts.filter((item) => item.title.includes(value));
@@ -15,11 +15,11 @@ function HomePage() {
     setTotalPost(filtered.length);
   };
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setExternalPosts(json));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //     .then((response) => response.json())
+  //     .then((json) => setExternalPosts(json));
+  // }, []);
 
   return (
     <>
@@ -35,11 +35,11 @@ function HomePage() {
       {filteredPosts.map((props, index) => (
         <Article {...props} key={index} />
       ))}
-      <hr />
+      {/* <hr />
       <h2>External Posts</h2>
       {externalPosts.map((item, index) => (
         <div key={index}> - {item.title}</div>
-      ))}
+      ))} */}
     </>
   );
 }
