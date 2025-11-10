@@ -5,6 +5,8 @@ import About from "../pages/About";
 import Blog from "../pages/Blog";
 import IdPages from "../pages/IdPages";
 
+import { posts, postById } from "../apis/loader";
+
 import RootLayout from "../layouts/RootLayout";
 
 export const router = createBrowserRouter([
@@ -23,10 +25,12 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+        loader: posts,
       },
       {
         path: "/blog/:id",
         element: <IdPages />,
+        loader: postById,
       },
     ],
   },

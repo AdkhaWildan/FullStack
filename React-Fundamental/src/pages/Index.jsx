@@ -2,7 +2,7 @@ import Article from "../components/article";
 import posts from "../data/Posts.json";
 import Search from "../components/Search";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function HomePage() {
   const [filteredPosts, setFilteredPosts] = useState(posts);

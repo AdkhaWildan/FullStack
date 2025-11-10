@@ -1,14 +1,18 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Blog() {
-  const [detailPosts, setDetailPosts] = useState([]);
+import { useLoaderData } from "react-router-dom";
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setDetailPosts(json));
-  }, []);
+function Blog() {
+  //   const [detailPosts, setDetailPosts] = useState([]);
+
+  //   useEffect(() => {
+  //     fetch("https://jsonplaceholder.typicode.com/posts")
+  //       .then((response) => response.json())
+  //       .then((json) => setDetailPosts(json));
+  //   }, []);
+
+  const detailPosts = useLoaderData();
 
   return (
     <>
